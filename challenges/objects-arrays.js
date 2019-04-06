@@ -151,9 +151,15 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const namesOnly = [];
 
+zooAnimals.forEach((info) => {
+  return namesOnly.push(info.animal_name);
+});
+
+/*
 zooAnimals.forEach(function(info){
   namesOnly.push(info.animal_name);
 });
+*/
 
 const lowerCase = namesOnly.map(theName => {
   return theName.toLowerCase();
@@ -167,9 +173,16 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
+const popUnder5 = zooAnimals.filter((animal) => {
+  return animal.population < 5;
+});
+
+/*
 const popUnder5 = zooAnimals.filter(function(animal) {
   return animal.population < 5; 
 });
+*/
+
 
 console.log('Below is an array containing all animals with a population count lower than 5:')
 console.log(popUnder5);
@@ -177,14 +190,20 @@ console.log(popUnder5);
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
-
 */
+
 const populationTotal = 0;
 let populationSizes = [];
 
+zooAnimals.map((info) => {
+  populationSizes.push(info.population);
+});
+
+/*
 zooAnimals.forEach(function(info){
   populationSizes.push(info.population);
 });
+*/
 
 console.log(`Population sizes of each animal: ${populationSizes}`);
 
