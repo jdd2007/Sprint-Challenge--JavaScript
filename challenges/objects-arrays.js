@@ -171,7 +171,8 @@ const popUnder5 = zooAnimals.filter(function(animal) {
   return animal.population < 5; 
 });
 
-console.log(`Array/list of the animals with a population less than 5:  ${popUnder5}`);
+console.log('Below is an array containing all animals with a population count lower than 5:')
+console.log(popUnder5);
 
 /* Request 4: .reduce() 
 
